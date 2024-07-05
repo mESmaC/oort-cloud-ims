@@ -1,0 +1,41 @@
+:root {
+    background-color: #212F45;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.mainView {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 7vh 1fr;
+    grid-template-areas: 
+        "header header"
+        "nav dashboard";
+    height: 100vh;
+}
+
+.headerBar {
+    grid-area: header;
+    background-color: #1B3A4B;
+}
+
+.navBar {
+    grid-area: nav;
+    background-color: #144552;
+}
+
+.dashboard {
+    grid-area: dashboard;
+    background-color: #272640;
+    overflow-y: auto;
+}
+
+.cardBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}

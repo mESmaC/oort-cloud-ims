@@ -1,0 +1,17 @@
+{
+    "name": "mesmac/oort-cloud-ims",
+    "autoload": {
+        "psr-4": {
+            "Mesmac\\OortCloudIms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cameron Emery",
+            "email": "75042648+mESmaC@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "fortawesome/font-awesome": "^6.5"
+    }
+}
