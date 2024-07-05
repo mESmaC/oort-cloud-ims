@@ -1,5 +1,4 @@
 :root {
-    background-color: #212F45;
     font-family: Inter, Sans-Serif;
 }
 
@@ -20,17 +19,18 @@ body {
 
 .headerBar {
     grid-area: header;
-    background-color: #1B3A4B;
-}
+    background-color: white;
+    filter: drop-shadow(0 0 0.15rem black);
+}  
 
 .navBar {
     grid-area: nav;
-    background-color: #144552;
+    background-color: #161f2e;
 }
 
 .dashboard {
     grid-area: dashboard;
-    background-color: #272640;
+    background-color: white;
     overflow-y: auto;
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 .card {
-    background-color: #312244;
+    background-color: #161f2e;
     border-radius: 8px;
     padding: 20px;
     color: white;
@@ -55,11 +55,21 @@ body {
 .card.loaded {
     opacity: 1;
     transform: translateY(0);
+    filter: drop-shadow(0.10rem 0.10rem 0.15rem black);
 }
 
 .navItem {
-    color: white;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    color: black;
+    padding-top: 1px;
+    padding-bottom: 1px;
     text-align: center;
+    background-color: white;
+}
+
+.navItem.selected {
+    color: black;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+    background-color: white;
 }
