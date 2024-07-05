@@ -1,5 +1,6 @@
 :root {
     background-color: #212F45;
+    font-family: Inter, Sans-Serif;
 }
 
 body {
@@ -38,4 +39,27 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
+    
+}
+
+.card {
+    background-color: #312244;
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.card.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navItem {
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
 }

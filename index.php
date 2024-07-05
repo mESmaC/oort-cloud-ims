@@ -7,6 +7,12 @@ $header = new Header();
 $nav = new Nav();
 $cardBox = new CardBox();
 
+$cardBox->addCard("Card 1", "Content 1");
+$cardBox->addCard("Card 2", "Content 2");
+$cardBox->addCard("Card 3", "<div id='content3'></div>");
+
+$nav->addNavItem('Dashboard');
+
 echo "
 <!DOCTYPE html>
 <html lang='en'>
