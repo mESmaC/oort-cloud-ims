@@ -7,8 +7,8 @@ $header = new Header();
 $nav = new Nav();
 $cardBox = new CardBox();
 
-$cardBox->addCard("Card 1", "Content 1");
-$cardBox->addCard("Card 2", "Content 2");
+$cardBox->addCard("Stock", "<div id='content1'></div>");
+$cardBox->addCard("Card 2", "<div id='content2'></div>");
 $cardBox->addCard("Card 3", "<div id='content3'></div>");
 
 $nav->addNavItem('Dashboard');
@@ -28,6 +28,13 @@ echo "
         {$header->render()}
         {$nav->render()}
         <main class='dashboard'>
+            <div id='statbar' class='statbar'>
+                <div id='key1'></div>
+                <div id='key2'></div>
+                <div id='key3'></div>
+                <div id='key4'></div>
+                <div id='key5'></div>
+                </div>
             {$cardBox->render()}
         </main>
     </div>

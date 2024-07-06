@@ -20,8 +20,18 @@ body {
 .headerBar {
     grid-area: header;
     background-color: white;
-    filter: drop-shadow(0 0 0.15rem black);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: right;
 }  
+
+.logo {
+    text-align: center;
+    font-weight: 700;
+    color: black;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
 
 .navBar {
     grid-area: nav;
@@ -30,7 +40,7 @@ body {
 
 .dashboard {
     grid-area: dashboard;
-    background-color: white;
+    background-color: whitesmoke;
     overflow-y: auto;
 }
 
@@ -39,14 +49,13 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    
 }
 
 .card {
-    background-color: #161f2e;
+    background-color: white;
     border-radius: 8px;
     padding: 20px;
-    color: white;
+    color: black;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
@@ -55,7 +64,7 @@ body {
 .card.loaded {
     opacity: 1;
     transform: translateY(0);
-    filter: drop-shadow(0.10rem 0.10rem 0.15rem black);
+    border: 1px solid rgba(128, 128, 128, 0.361);
 }
 
 .navItem {
@@ -63,7 +72,14 @@ body {
     padding-top: 1px;
     padding-bottom: 1px;
     text-align: center;
-    background-color: white;
+    background-color: whitesmoke;
+    transition: all 0.3s ease;
+}
+
+.navItem:hover {
+    background-color: black;
+    color: white; 
+    cursor: pointer;   
 }
 
 .navItem.selected {
@@ -72,4 +88,94 @@ body {
     padding-bottom: 1px;
     text-align: center;
     background-color: white;
+}
+
+.statbar {
+    background-color: white;
+    color: black;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 4rem;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.statbar.loaded {
+    opacity: 1;
+    transform: translateY(0);
+    border: 1px solid rgba(128, 128, 128, 0.361);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 5px;
+}
+
+@media (max-width: 1150px) {
+    .cardBox {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+        
+    }
+}
+
+@media (max-width: 860px) {
+    .cardBox {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding: 20px;   
+    }
+
+    .mainView {
+        display: grid;
+        font-size: 80%;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 7vh 1fr;
+        grid-template-areas: 
+            "header header"
+            "nav dashboard";
+        height: 100vh;
+    }
+}
+#content1 {
+    height: 300px; /* Adjust the height as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.item-card {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-card p {
+    margin: 0;
+    padding: 2px 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.item-subheader {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+}
+
+#key1, #key2, #key3, #key4, #key5 {
+    margin: 1px;
+    border: 1px solid rgba(128, 128, 128, 0.361);
+    text-align: center;
 }
