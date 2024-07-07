@@ -34,11 +34,17 @@ echo "
                 <div id='key3'></div>
                 <div id='key4'></div>
                 <div id='key5'></div>
-                </div>
+            </div>
             {$cardBox->render()}
         </main>
     </div>
-        <script src='./scripts/index.js'></script>
+    <div id='modal' class='modal'>
+        <div class='modal-content'>
+            <span class='close'>&times;</span>
+            <div id='modal-body'></div>
+        </div>
+    </div>
+        <script type='module' src='./scripts/index.php'></script>
     </body>
 </html>
 ";
