@@ -7,7 +7,7 @@ $header = new Header();
 $nav = new Nav();
 $cardBox = new CardBox();
 
-$cardBox->addCard("Stock", "<div id='content1'></div>");
+$cardBox->addCard("Stock", "<div id='content1'></div><span class='tooltip'>Click to expand</span>");
 $cardBox->addCard("Card 2", "<div id='content2'></div>");
 $cardBox->addCard("Card 3", "<div id='content3'></div>");
 
@@ -40,11 +40,13 @@ echo "
     </div>
     <div id='modal' class='modal'>
         <div class='modal-content'>
+        <button id='exportButton'>Export as XLSX</button>
             <span class='close'>&times;</span>
             <div id='modal-body'></div>
         </div>
-    </div>
-        <script type='module' src='./scripts/index.php'></script>
+    </div>    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js'></script>
+    <script type='module' src='./scripts/index.php'></script>
     </body>
 </html>
 ";

@@ -26,7 +26,7 @@ export const handleModal = (card1Content, modal, modalBody, closeModal) => {
 };
 
 export const populateModal = (data, modalBody) => {
-    let table = `<table>
+    let table = `<table id="dataTable">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -50,4 +50,9 @@ export const populateModal = (data, modalBody) => {
     });
     table += `</tbody></table>`;
     modalBody.innerHTML = table;
+
+    document.getElementById('exportButton').addEventListener('click', () => {
+        const wb = XLSX.utils.table_to_book(document.getElementById('dataTable'), {sheet: "Sheet1"});
+        XLSX.writeFile(wb, 'exported_data.xlsx');
+    });
 };
